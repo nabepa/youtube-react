@@ -1,8 +1,15 @@
 import React from 'react';
 import './app.css';
+import Navbar from './components/navbar';
+import SideBar from './components/sidebar';
 
 function App() {
-  return <h1>Hello World!</h1>;
+  return (
+    <>
+      <Navbar />
+      <SideBar />
+    </>
+  );
 }
 
 export default App;
