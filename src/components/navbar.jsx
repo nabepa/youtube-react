@@ -1,15 +1,15 @@
-import React from 'react';
+import React, { memo } from 'react';
 import SearchBar from './searchBar';
 import logo_img from '../images/logo.png';
 
-const Navbar = (props) => {
+const NavBar = memo((props) => {
   return (
     <nav>
       <div className='left-side'>
         <button className='open-sidebar btn-icon'>
           <i className='fas fa-bars'></i>
         </button>
-        <a className='home' href=''>
+        <a className='home' href='javascript:void(0)'>
           <img className='home__logo' src={logo_img} alt='YOUTUBE' />
           <span className='home__youtube'>Youtube</span>
           <span className='home__local'>JP</span>
@@ -17,7 +17,7 @@ const Navbar = (props) => {
       </div>
 
       <div className='center-side'>
-        <SearchBar />
+        <SearchBar onSearch={props.onSearch} />
       </div>
 
       <div className='right-side'>
@@ -34,6 +34,6 @@ const Navbar = (props) => {
       </div>
     </nav>
   );
-};
+});
 
-export default Navbar;
+export default NavBar;

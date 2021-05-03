@@ -26,7 +26,8 @@
 }
 body {
   font-family: Arial;
-  background-color: var(--dark-black-color);
+  /* background-color: var(--dark-black-color); */
+  background-color: var(--white-color);
 }
 a {
   text-decoration: none;

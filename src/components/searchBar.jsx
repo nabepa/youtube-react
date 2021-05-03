@@ -1,13 +1,24 @@
-import React from 'react';
+import React, { memo } from 'react';
 
-const SearchBar = (props) => {
-  const onSubmit = () => {
-    console.log('ho');
+const SearchBar = memo((props) => {
+  const formRef = React.useRef();
+  const inputRef = React.useRef();
+
+  const onSubmit = (event) => {
+    event.preventDefault();
+    const query = inputRef.current.value;
+    query && props.onSearch(query);
+    formRef.current.reset();
   };
   return (
-    <form className='search-bar' onSubmit={onSubmit}>
+    <form ref={formRef} className='search-bar' onSubmit={onSubmit}>
       <div className='search-bar__inputbox'>
-        <input className='search-bar__input' type='text' placeholder='Search' />
+        <input
+          ref={inputRef}
+          className='search-bar__input'
+          type='text'
+          placeholder='Search'
+        />
         <button className='search-bar__virtual-keyboard'>
           <i className='fas fa-keyboard'></i>
         </button>
@@ -20,6 +31,6 @@ const SearchBar = (props) => {
       </button>
     </form>
   );
-};
+});
 
 export default SearchBar;
