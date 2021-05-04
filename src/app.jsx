@@ -1,40 +1,27 @@
-import React, { Component } from 'react';
-import './app.css';
-import NavBar from './components/navBar';
-// import SideBar from './components/sidebar';
-import VideoList from './components/videoList';
-import axios from 'axios';
+import React, { useState, useEffect } from 'react';
+import styles from './app.module.css';
+import SearchHeader from './components/search_header/search_header';
+import VideoList from './components/video_list/video_list';
 
-class App extends Component {
-  state = {
-    videos: [],
-    selectedVideo: null,
+function App({ youtube }) {
+  const [videos, setVideos] = useState([]);
+  const search = (query) => {
+    youtube
+      .search(query) //
+      .then((videos) => setVideos(videos));
   };
 
-  handdleSearch = async (queryFromSearchBar) => {
-    const baseUrl = 'https://youtube.googleapis.com/youtube/v3';
-    const apiKey = 'AIzaSyCrgr1-hAAzcJdRTF9IHNuYy4ndwKePR4w';
-    const axios = require('axios');
-    const confSearch = {
-      method: 'get',
-      url: `${baseUrl}/search?part=snippet&maxResults=10&q=${queryFromSearchBar}&key=${apiKey}`,
-      headers: {},
-    };
-    const resSearch = await axios(confSearch);
-    this.setState({
-      videos: resSearch.data.items,
-    });
-  };
-
-  render() {
-    return (
-      <>
-        <NavBar onSearch={this.handdleSearch} />
-        {/* <SideBar /> */}
-        <VideoList videos={this.state.videos} />
-      </>
-    );
-  }
+  useEffect(() => {
+    youtube
+      .mostPopular() //
+      .then((videos) => setVideos(videos));
+  }, []);
+  return (
+    <div className={styles.app}>
+      <SearchHeader onSearch={search} />
+      <VideoList videos={videos} />
+    </div>
+  );
 }
 
 export default App;
