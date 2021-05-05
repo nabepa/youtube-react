@@ -45,7 +45,7 @@ const SearchHeader = memo(({ onSearch }) => {
         <i className='fas fa-bell'></i>
       </button>
       <button className={styles.button}>
-        <i class='fab fa-github'></i>
+        <i className='fab fa-github'></i>
       </button>
     </header>
   );
