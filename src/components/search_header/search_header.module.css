@@ -4,6 +4,8 @@
   padding: 0.8em 1em;
   background-color: #202020;
   color: white;
+  position: sticky;
+  top: 0;
 }
 
 .logo {

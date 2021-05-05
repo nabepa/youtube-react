@@ -1,6 +1,7 @@
 .detail {
   margin: 1.5em 2em;
   padding: 0.2em;
+  position: fixed;
 }
 
 .metadata {
