@@ -2,8 +2,7 @@
   display: flex;
   height: 4rem;
   padding: 0.8em 1em;
-  /* background-color: #202020; */
-  background: #202020;
+  background-color: #202020;
   color: white;
 }
 
@@ -13,8 +12,14 @@
   margin-right: 1em;
 }
 
-.input {
+.form {
   flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.input {
+  flex-basis: 80%;
   font-size: 1.2rem;
   outline: 0;
 }

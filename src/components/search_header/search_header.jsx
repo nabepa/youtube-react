@@ -2,19 +2,14 @@ import styles from './search_header.module.css';
 import React, { memo, useRef } from 'react';
 
 const SearchHeader = memo(({ onSearch }) => {
+  const formRef = useRef();
   const inputRef = useRef();
-  const handdleSearch = () => {
-    const value = inputRef.current.value;
-    onSearch(value);
-  };
 
-  const onClick = () => {
-    handdleSearch();
-  };
-  const onkeyPress = (event) => {
-    if (event.key === 'Enter') {
-      handdleSearch();
-    }
+  const onSubmit = (event) => {
+    event.preventDefault();
+    const query = inputRef.current.value;
+    query && onSearch(query);
+    formRef.current.reset();
   };
 
   return (
@@ -23,20 +18,21 @@ const SearchHeader = memo(({ onSearch }) => {
         <img className={styles.img} src='/images/logo.png' alt='logo' />
         <h1 className={styles.title}>Youtube</h1>
       </div>
-      <input
-        ref={inputRef}
-        className={styles.input}
-        type='search'
-        placeholder='Search...'
-        onKeyPress={onkeyPress}
-      />
-      <button className={styles.button} type='submit' onClick={onClick}>
-        <img
-          className={styles.buttonImg}
-          src='/images/search.png'
-          alt='search'
+      <form ref={formRef} className={styles.form} onSubmit={onSubmit}>
+        <input
+          ref={inputRef}
+          className={styles.input}
+          type='search'
+          placeholder='Search...'
         />
-      </button>
+        <button className={styles.button} type='submit'>
+          <img
+            className={styles.buttonImg}
+            src='/images/search.png'
+            alt='search'
+          />
+        </button>
+      </form>
     </header>
   );
 });
