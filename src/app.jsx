@@ -11,6 +11,7 @@ function App({ youtube }) {
   const selectVideo = useCallback((video) => {
     setSelectedVideo(video);
   });
+
   const search = useCallback(
     (query) => {
       youtube
