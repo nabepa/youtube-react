@@ -14,10 +14,15 @@ const SearchHeader = memo(({ onSearch }) => {
 
   return (
     <header className={styles.header}>
+      <button className={styles.button}>
+        <i className='fas fa-bars'></i>
+      </button>
+
       <div className={styles.logo}>
-        <img className={styles.img} src='/images/logo.png' alt='logo' />
-        <h1 className={styles.title}>Youtube</h1>
+        <img className={styles.logoImg} src='/images/logo.png' alt='logo' />
+        <h1 className={styles.logoTitle}>Youtube</h1>
       </div>
+
       <form ref={formRef} className={styles.form} onSubmit={onSubmit}>
         <input
           ref={inputRef}
@@ -25,14 +30,23 @@ const SearchHeader = memo(({ onSearch }) => {
           type='search'
           placeholder='Search...'
         />
-        <button className={styles.button} type='submit'>
-          <img
-            className={styles.buttonImg}
-            src='/images/search.png'
-            alt='search'
-          />
+        <button className={styles.button}>
+          <i className='fas fa-search'></i>
         </button>
       </form>
+
+      <button className={styles.button}>
+        <i className='fas fa-video'></i>
+      </button>
+      <button className={styles.button}>
+        <i className='fas fa-th'></i>
+      </button>
+      <button className={styles.button}>
+        <i className='fas fa-bell'></i>
+      </button>
+      <button className={styles.button}>
+        <i class='fab fa-github'></i>
+      </button>
     </header>
   );
 });
