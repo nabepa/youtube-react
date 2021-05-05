@@ -1,5 +1,5 @@
-import React, { memo, useRef } from 'react';
 import styles from './search_header.module.css';
+import React, { memo, useRef } from 'react';
 
 const SearchHeader = memo(({ onSearch }) => {
   const inputRef = useRef();
@@ -7,6 +7,7 @@ const SearchHeader = memo(({ onSearch }) => {
     const value = inputRef.current.value;
     onSearch(value);
   };
+
   const onClick = () => {
     handdleSearch();
   };
@@ -15,6 +16,7 @@ const SearchHeader = memo(({ onSearch }) => {
       handdleSearch();
     }
   };
+
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
@@ -33,7 +35,6 @@ const SearchHeader = memo(({ onSearch }) => {
           className={styles.buttonImg}
           src='/images/search.png'
           alt='search'
-          className='src'
         />
       </button>
     </header>

@@ -1,5 +1,5 @@
-import React from 'react';
 import styles from './video_detail.module.css';
+import React from 'react';
 
 const VideoDetail = ({ video, video: { snippet } }) => {
   const decode = require('unescape');

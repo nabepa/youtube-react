@@ -1,11 +1,10 @@
-import React, { memo } from 'react';
 import styles from './video_item.module.css';
+import React, { memo } from 'react';
 
 const VideoItem = memo(
   ({ video, video: { snippet }, onVideoClick, display }) => {
     const displayType = display === 'list' ? styles.list : styles.grid;
     const decode = require('unescape');
-    // console.log('videoItem');
     return (
       <li
         className={`${styles.container} ${displayType}`}
