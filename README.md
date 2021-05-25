@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+# Youtube-react
+
+Read this in other languages: [한국어 🇰🇷](README.ko.md)
+
+You can try this app, click below badge!
+[![Netlify Status](https://api.netlify.com/api/v1/badges/aea01573-e082-44b4-8617-12e71bf71494/deploy-status)](https://musing-khorana-85bd76.netlify.app/)
+
+<img width="900" height="450" src="public/images/mainUI.png">
+
+## ⭐️ 機能
+
+- React と Youtube Data API を利用して，Youtube サイト作成
+- 実現した機能
+  - 人気動画表示
+  - 検索
+  - 再生
+
+## 🦄 言語とツール
+
+<p>
+    <img src="https://img.shields.io/badge/HTML-E34F26?style=flat&logo=HTML5&logoColor=white"/>&nbsp;&nbsp;
+    <img src="https://img.shields.io/badge/CSS-1572B6?style=flat&logo=CSS3&logoColor=white"/>&nbsp;&nbsp;
+    <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=JavaScript&logoColor=black"/>&nbsp;&nbsp;
+    <img src="https://img.shields.io/badge/PostCSS-DD3A0A?style=flat&logo=PostCSS&logoColor=white"/>&nbsp;&nbsp;
+    <img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=React&logoColor=black"/>&nbsp;&nbsp;
+    <img src="https://img.shields.io/badge/Node.js-339933?style=flat&logo=Node.js&logoColor=white"/>&nbsp;&nbsp;
+    <img src="https://img.shields.io/badge/Yarn-2C8EBB?style=flat&logo=Yarn&logoColor=white"/>&nbsp;&nbsp;
+    <img src="https://img.shields.io/badge/Postman-FF6C37?style=flat&logo=Postman&logoColor=white"/>
+ </p>
+
+## 📚 ライブラリとリソース，API
+
+- [Youtube Data API](https://developers.google.com/youtube/v3): Youtube の人気動画と検索動画の情報を取得
+- [axios](https://github.com/axios/axios): Youtube API データの fetch
+- [unescape](https://github.com/jonschlinkert/unescape): 変換されなかった予約語を記号に変換
+- [Font-Awesome](https://github.com/FortAwesome/Font-Awesome): 各種アイコン
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## 📖 Project で新しく勉強した事
 
-In the project directory, you can run:
+### React Hooks
 
-### `yarn start`
+- React Component は 2 種類: Class Component と Function Component
+- Function Component は Class Component と異なり，re-rendering の際に変数や関数を再定義
+  → State, Props, Lifecycle 管理が困難
+- そこで登場したのが[React Hooks](https://reactjs.org/docs/hooks-intro.html)
+- useState(), useCallback(), useRef(), useEffect()を使用
+- React Hooks を利用して開発する長所
+  - this keyword を使用しない → this 関連のミスを抑えられる，可読性も上がる
+  - lifecycle 管理もより簡単
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Denpendancy Injection
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+> In software engineering, dependency injection is a technique in which an object receives other objects that it depends on. - [Wikipedia](https://en.wikipedia.org/wiki/Dependency_injection)
 
-### `yarn test`
+- 単体テストの効率化
+- 特定のオブジェクトへの依存度を低下 → コードの再利用が用意
+- 本プロジェクトでは Youtube API でデータを読み込む機能を分離し，Component に注入
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### .env で環境変数管理
 
-### `yarn build`
+> An environment variable is a dynamic-named value that can affect the way running processes will behave on a computer. - [Wikipedia](https://en.wikipedia.org/wiki/Environment_variable)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- 環境変数には API key のように公開してはならない情報もある
+- Node.js では.env ファイルで環境変数を管理
+- .env は repository にセーブしないため，Netlify などで deploy するためには環境変数を新たに設定
+  [Build environment variables](https://docs.netlify.com/configure-builds/environment-variables/?_ga=2.16342838.1011166816.1621828766-787042033.1618744237)
+- [React の環境変数管理](https://create-react-app.dev/docs/adding-custom-environment-variables/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Postman
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- API 通信テストと fetch コード自動生成などが可能
+- [https://www.postman.com/](https://www.postman.com/)
 
-### `yarn eject`
+## 🐛 改善の必要な部分
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- channel thumnail の表示
+- レスポンシブウェブデザイン
