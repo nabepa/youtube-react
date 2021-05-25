@@ -1,7 +1,7 @@
 # Youtube-react
 
 Read this in other languages: [日本語 🇯🇵](README.md)
-
+</br>
 You can try this app, click below badge!
 [![Netlify Status](https://api.netlify.com/api/v1/badges/aea01573-e082-44b4-8617-12e71bf71494/deploy-status)](https://musing-khorana-85bd76.netlify.app/)
 
