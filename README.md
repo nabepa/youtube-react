@@ -74,7 +74,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - API 通信テストと fetch コード自動生成などが可能
 - [https://www.postman.com/](https://www.postman.com/)
 
-## 🐛 改善
+## 🐛 改善予定
 
-- <span>channel thumnail の表示</span>
+- チャンネルサムネいるの表示
 - レスポンシブウェブデザイン
+- 接続地域のおすすめ動画表示

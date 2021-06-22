@@ -75,7 +75,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - API 통신 테스트와 fetch 코드의 자동 생성 등이 가능
 - [https://www.postman.com/](https://www.postman.com/)
 
-## 🐛 개선
+## 🐛 개선 예정
 
-- channel thumnail의 표시
+- channel thumbnail의 표시
 - 반응형 디자인
