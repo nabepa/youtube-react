@@ -3,6 +3,7 @@
 Read this in other languages: [日本語 🇯🇵](README.md)
 </br>
 You can try this app, click below badge!
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/aea01573-e082-44b4-8617-12e71bf71494/deploy-status)](https://musing-khorana-85bd76.netlify.app/)
 
 <img width="900" height="450" src="public/images/mainUI.png">
@@ -15,7 +16,7 @@ You can try this app, click below badge!
   - 검색
   - 재생
 
-## 🦄 언어와 툴
+## 🦄 사용 언어와 툴
 
 <p>
     <img src="https://img.shields.io/badge/HTML-E34F26?style=flat&logo=HTML5&logoColor=white"/>&nbsp;&nbsp;
@@ -28,7 +29,7 @@ You can try this app, click below badge!
     <img src="https://img.shields.io/badge/Postman-FF6C37?style=flat&logo=Postman&logoColor=white"/>
  </p>
 
-## 📚 라이브러리와 리소스, API
+## 📚 사용 라이브러리와 리소스, API
 
 - [Youtube Data API](https://developers.google.com/youtube/v3): Youtube의 인기 영상과 검색 영상 취득
 - [axios](https://github.com/axios/axios): Youtube API 데이터 fetch
@@ -74,7 +75,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - API 통신 테스트와 fetch 코드의 자동 생성 등이 가능
 - [https://www.postman.com/](https://www.postman.com/)
 
-## 🐛 개선이 필요한 부분
+## 🐛 개선
 
 - channel thumnail의 표시
 - 반응형 디자인

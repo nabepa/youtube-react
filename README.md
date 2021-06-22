@@ -16,7 +16,7 @@ You can try this app, click below badge!
   - 検索
   - 再生
 
-## 🦄 言語とツール
+## 🦄 使用言語とツール
 
 <p>
     <img src="https://img.shields.io/badge/HTML-E34F26?style=flat&logo=HTML5&logoColor=white"/>&nbsp;&nbsp;
@@ -29,7 +29,7 @@ You can try this app, click below badge!
     <img src="https://img.shields.io/badge/Postman-FF6C37?style=flat&logo=Postman&logoColor=white"/>
  </p>
 
-## 📚 ライブラリとリソース，API
+## 📚 使用ライブラリとリソース，API
 
 - [Youtube Data API](https://developers.google.com/youtube/v3): Youtube の人気動画と検索動画の情報を取得
 - [axios](https://github.com/axios/axios): Youtube API データの fetch
@@ -74,7 +74,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - API 通信テストと fetch コード自動生成などが可能
 - [https://www.postman.com/](https://www.postman.com/)
 
-## 🐛 改善の必要な部分
+## 🐛 改善
 
-- channel thumnail の表示
+- <span>channel thumnail の表示</span>
 - レスポンシブウェブデザイン
